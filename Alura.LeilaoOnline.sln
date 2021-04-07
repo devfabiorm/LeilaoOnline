@@ -7,9 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{894A2A57-089
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{68AD3042-8061-446C-AD1A-17DA50FC2D09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.LeilaoOnline.Core", "Alura.LeilaoOnline.Core\Alura.LeilaoOnline.Core.csproj", "{A0D3BDAE-A682-4E97-B4D7-53668BA940D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alura.LeilaoOnline.Core", "Alura.LeilaoOnline.Core\Alura.LeilaoOnline.Core.csproj", "{A0D3BDAE-A682-4E97-B4D7-53668BA940D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.LeilaoOnline.ConsoleApp", "Alura.LeilaoOnline.ConsoleApp\Alura.LeilaoOnline.ConsoleApp.csproj", "{84BC6436-F17F-4490-AE47-93E1EEAD6CA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alura.LeilaoOnline.ConsoleApp", "Alura.LeilaoOnline.ConsoleApp\Alura.LeilaoOnline.ConsoleApp.csproj", "{84BC6436-F17F-4490-AE47-93E1EEAD6CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.LeilaoOnline.Tests", "Alura.LeilaoOnline.Tests\Alura.LeilaoOnline.Tests.csproj", "{6C84C812-E4B3-4E9A-8AED-04F4C10B6602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{84BC6436-F17F-4490-AE47-93E1EEAD6CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84BC6436-F17F-4490-AE47-93E1EEAD6CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84BC6436-F17F-4490-AE47-93E1EEAD6CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C84C812-E4B3-4E9A-8AED-04F4C10B6602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C84C812-E4B3-4E9A-8AED-04F4C10B6602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C84C812-E4B3-4E9A-8AED-04F4C10B6602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C84C812-E4B3-4E9A-8AED-04F4C10B6602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A0D3BDAE-A682-4E97-B4D7-53668BA940D0} = {894A2A57-089E-410D-BA6E-3EB7335159D1}
 		{84BC6436-F17F-4490-AE47-93E1EEAD6CA2} = {68AD3042-8061-446C-AD1A-17DA50FC2D09}
+		{6C84C812-E4B3-4E9A-8AED-04F4C10B6602} = {68AD3042-8061-446C-AD1A-17DA50FC2D09}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0175527F-9D0E-4E34-ABB0-4AC84632CDC2}
