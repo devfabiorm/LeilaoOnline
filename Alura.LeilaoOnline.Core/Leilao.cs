@@ -19,12 +19,14 @@ namespace Alura.LeilaoOnline.Core
         public string Peca { get; }
         public Lance Ganhador { get; private set; }
         public EstadoLeilao Estado { get; set; }
+        public double ValorDestino { get; }
 
-        public Leilao(string peca)
+        public Leilao(string peca, double valorDestino = 0)
         {
             Peca = peca;
             _lances = new List<Lance>();
             Estado = EstadoLeilao.LeilaoAntesDoPregao;
+            ValorDestino = valorDestino;
         }
 
         private bool NovoLanceEhAceito(Interessada cliente, double valor)
@@ -53,12 +55,25 @@ namespace Alura.LeilaoOnline.Core
                 throw new InvalidOperationException("Não é possível terminar o leilao sem antes iniciá-lo. Para isso, use o método IniciaPrega()");
             }
 
-            Ganhador = Lances
+            if(ValorDestino > 0)
+            {
+                //Modalidade do lance maior mais próximo
+                Ganhador = Lances
+                    .DefaultIfEmpty(new Lance(null, 0))
+                    .Where(l => l.Valor > ValorDestino)
+                    .OrderBy(l => l.Valor)
+                    .FirstOrDefault();
+            }
+            else
+            {
+                //Modalidade do maior Lance
+                Ganhador = Lances
                 .DefaultIfEmpty(new Lance(null, 0))
                 .OrderBy(l => l.Valor)
                 .LastOrDefault();
 
-            Estado = EstadoLeilao.LeilaoFinalizado;
+                Estado = EstadoLeilao.LeilaoFinalizado;
+            }
         }
     }
 }
